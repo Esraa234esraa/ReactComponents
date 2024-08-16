@@ -37,10 +37,15 @@ function toggole() {
 
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 70) {
-        navbar.classList.add('shrink');
-    } else {
-        navbar.classList.remove('shrink');
+    if (links.classList.contains('hidden')) {
+        if (window.scrollY > 70) {
+            navbar.classList.add('shrink');
+        } else {
+            navbar.classList.remove('shrink');
+        }
+    }
+    else {
+        navbar.classList.remove('shrink')
     }
 });
 
